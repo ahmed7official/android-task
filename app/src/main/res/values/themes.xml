@@ -17,7 +17,10 @@
 
     <style name="DefaultTextField" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/default_text_field_shape</item>
-        <item name="android:padding">@dimen/_16sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:paddingTop">@dimen/_14sdp</item>
+        <item name="android:paddingBottom">@dimen/_14sdp</item>
     </style>
 
 </resources>

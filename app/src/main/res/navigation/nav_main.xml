@@ -8,4 +8,8 @@
         android:id="@+id/loginFragment"
         android:name="com.task.android.ui.main.login.LoginFragment"
         android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/createNearAccountFragment"
+        android:name="com.task.android.ui.main.create_near_account.CreateNearAccountFragment"
+        android:label="CreateNearAccountFragment" />
 </navigation>

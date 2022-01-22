@@ -9,8 +9,11 @@ import android.util.Patterns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.task.android.R
 
 
@@ -83,6 +86,20 @@ fun Activity.hideSoftKeyboard() {
 
 fun Fragment.hideSoftKeyboard() {
     requireActivity().hideSoftKeyboard()
+}
+
+
+fun Fragment.navigate(@IdRes resId: Int) {
+
+    val navOptions = NavOptions.Builder().apply {
+        setEnterAnim(R.anim.enter_anim)
+        setExitAnim(R.anim.exit_anim)
+        setPopEnterAnim(R.anim.pop_enter_anim)
+        setPopExitAnim(R.anim.pop_exit_anim)
+    }.build()
+
+    findNavController().navigate(resId, null, navOptions)
+
 }
 
 /**

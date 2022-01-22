@@ -1,4 +1,4 @@
-package com.task.android.ui.main.login
+package com.task.android.ui.main.create_near_account
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,24 +7,29 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.task.android.R
-import com.task.android.databinding.FragmentLoginBinding
-import com.task.android.utils.navigate
+import com.task.android.databinding.FragmentCreateNearAccountBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class LoginFragment : Fragment() {
+class CreateNearAccountFragment : Fragment() {
 
-    private var binding: FragmentLoginBinding? = null
+    private val viewModel by viewModels<CreateNearAccountViewModel>()
 
-    private val viewModel by viewModels<LoginViewModel>()
+    private var binding: FragmentCreateNearAccountBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_create_near_account,
+            container,
+            false
+        )
         return binding?.root
     }
 
@@ -34,12 +39,12 @@ class LoginFragment : Fragment() {
         binding?.viewModel = viewModel
         binding?.lifecycleOwner = this
 
-        binding?.getStarted?.setOnClickListener { navigate(R.id.createNearAccountFragment) }
+        binding?.close?.setOnClickListener { findNavController().navigateUp() }
 
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
     }
+
 }

@@ -10,4 +10,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="by_click_terms"><![CDATA[by clicking continue you must agree to near labs Terms & Conditions ans Privacu Policy]]></string>
+    <string name="icon">icon</string>
+    <string name="create_near_account">Create NEAR Account</string>
+    <string name="enter_an_account_id_to_use_with_your_near_account_your_account_id_will_be_used_for_all_near_operations_including_sending_and_receiving_assets">Enter an Account ID to use with your NEAR account. Your Account ID will be used for all NEAR operations, including sending and receiving assets.</string>
+    <string name="full_name">Full name</string>
+    <string name="ex_john_doe">Ex John Doe</string>
+    <string name="wallet_id">Wallet ID</string>
+    <string name="yourname_near">yourname.near</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="by_creating_a_near_account_you_agree_to_the_near_wallet_terms_of_service_and_privacy_policy">By creating a NEAR account, you agree to the NEAR Wallet Terms of Service and Privacy Policy.</string>
+    <string name="login_with_near">Login with NEAR</string>
 </resources>

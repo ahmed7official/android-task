@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="registration_pattern_height">@dimen/_230sdp</dimen>
+</resources>
