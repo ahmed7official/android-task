@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.task.android.R
 import com.task.android.databinding.FragmentLoginBinding
+import com.task.android.utils.gone
 import com.task.android.utils.navigate
+import com.task.android.utils.show
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -35,6 +37,32 @@ class LoginFragment : Fragment() {
         binding?.lifecycleOwner = this
 
         binding?.getStarted?.setOnClickListener { navigate(R.id.createNearAccountFragment) }
+
+        handleToggleLayout()
+
+    }
+
+    private fun handleToggleLayout() {
+        binding?.toggleLayout?.setOnSelectListener { button ->
+
+            when (button.id) {
+                R.id.btnEmail -> {
+                    binding?.email?.show()
+                    binding?.email?.requestFocus()
+
+                    binding?.phone?.gone()
+                }
+                R.id.btnPhone -> {
+                    binding?.email?.gone()
+
+                    binding?.phone?.show()
+                    binding?.phone?.requestFocus()
+                }
+            }
+
+        }
+
+        binding?.toggleLayout?.selectButton(R.id.btnEmail)
 
     }
 

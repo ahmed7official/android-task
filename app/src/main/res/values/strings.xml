@@ -26,4 +26,6 @@
     <string name="try_again_later">Try again later</string>
     <string name="search_people">Search People</string>
     <string name="import_btn">Import</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
 </resources>

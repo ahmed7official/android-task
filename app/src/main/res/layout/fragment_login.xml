@@ -28,24 +28,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/registration_pattern_height"
+                android:background="@color/white"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="@dimen/_16sdp">
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_16sdp">
+
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+                    android:id="@+id/toggleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="center"
+                    app:toggle_horizontalSpacing="@dimen/_24sdp"
+                    app:toggle_selectableAmount="1">
+
+                    <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                        android:id="@+id/btnEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        app:toggle_backgroundColor="@color/white"
+                        app:toggle_btnCornerRadius="10dp"
+                        app:toggle_selectedBackgroundColor="@color/purple_500"
+                        app:toggle_text="@string/email" />
+
+                    <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                        android:id="@+id/btnPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        app:toggle_backgroundColor="@color/white"
+                        app:toggle_btnCornerRadius="10dp"
+                        app:toggle_selectedBackgroundColor="@color/purple_500"
+                        app:toggle_text="@string/phone" />
+
+                </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
 
 
                 <EditText
+                    android:id="@+id/email"
                     style="@style/DefaultTextField"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:autofillHints="no"
                     android:hint="@string/email_address"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.email}" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    style="@style/DefaultTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:autofillHints="no"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:text="@={viewModel.phone}"
+                    android:visibility="gone" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/getStarted"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_16sdp"
+                    android:enabled="@{viewModel.enableRegistration}"
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingTop="@dimen/_12sdp"
                     android:paddingEnd="@dimen/_16sdp"
