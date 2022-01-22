@@ -125,7 +125,7 @@
                     android:text="@={viewModel.walletId}" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/getStarted"
+                    android:id="@+id/creaetAccount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

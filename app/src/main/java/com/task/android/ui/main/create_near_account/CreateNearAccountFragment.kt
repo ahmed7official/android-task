@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.task.android.R
 import com.task.android.databinding.FragmentCreateNearAccountBinding
+import com.task.android.utils.navigate
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -40,6 +41,7 @@ class CreateNearAccountFragment : Fragment() {
         binding?.lifecycleOwner = this
 
         binding?.close?.setOnClickListener { findNavController().navigateUp() }
+        binding?.creaetAccount?.setOnClickListener { navigate(R.id.giftFragment) }
 
     }
 

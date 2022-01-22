@@ -12,4 +12,8 @@
         android:id="@+id/createNearAccountFragment"
         android:name="com.task.android.ui.main.create_near_account.CreateNearAccountFragment"
         android:label="CreateNearAccountFragment" />
+    <fragment
+        android:id="@+id/giftFragment"
+        android:name="com.task.android.ui.main.gift.GiftFragment"
+        android:label="GiftFragment" />
 </navigation>
