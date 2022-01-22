@@ -11,4 +11,6 @@ class LoginViewModel @Inject constructor() : ViewModel() {
     val email = MutableStateFlow("")
     val phone = MutableStateFlow("")
 
+    val wallet = MutableStateFlow("")
+
 }
